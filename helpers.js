@@ -24,7 +24,7 @@ const addListenerToButton = () => {
 }
 const removeButton = () => {
     const $menuButton = document.getElementById('header__menu-button');
-    $menuButton.remove();
+    if ($menuButton) $menuButton.remove();
 }
 
 export const responsiveMedia = (mq) => {
@@ -42,6 +42,9 @@ export const responsiveMedia = (mq) => {
         console.log(event.matches, 'EL EVENTO');
         if (event.matches) {
             removeButton();
+            return
         }
+        $headerContainer.appendChild(createButtonMenu());
+        addListenerToButton();
     });
 }
