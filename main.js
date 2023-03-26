@@ -7,6 +7,7 @@ const doc = document;
 
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Se cargó el contenido');
+    // The cut must be in 990mq
     responsiveMedia('(min-width: 600px)');
 });
 

@@ -1,3 +1,4 @@
+import { createElement, liElement, navElement, ulElement } from './createElement.js';
 let $headerContainer = document.querySelector('.header__container');
 
 const createButtonMenu = () => {
@@ -18,7 +19,6 @@ const createButtonMenu = () => {
 const addListenerToButton = () => {
     const $menuButton = document.getElementById('header__menu-button');
     $menuButton.addEventListener('click', () => {
-        console.log('cambiado clas');
         $menuButton.classList.toggle('open');
     });
 }
@@ -27,17 +27,41 @@ const removeButton = () => {
     if ($menuButton) $menuButton.remove();
 }
 
+/*
+<nav class="header__nav">
+                <ul class="header__menu">
+                    <li class="header__menu-item">Premium</li>
+                    <li class="header__menu-item">Ayuda</li>
+                    <li class="header__menu-item">Descargar</li>
+                    <li class="header__menu-item separator">|</li>
+                    <li class="header__menu-item">Registrarse</li>
+                    <li class="header__menu-item">Iniciar Sesión</li>
+                </ul>
+</nav>
+*/
+const addDesktopMenu = () => {
+    const $navNode = createElement(navElement);
+    const $ulNode = createElement(ulElement);
+    const textInLiTags = ['Premium', 'Ayuda', 'Descargar', '|', 'Registrarse', 'Iniciar Sesión'];
+    $navNode.appendChild($ulNode);
+    for (let i = 0; i < textInLiTags.length; i++) {
+        const $liElement = createElement(liElement);
+        $liElement.innerText = textInLiTags[i]
+        if (textInLiTags[i] === '|') $liElement.classList.add('separator');
+        $ulNode.appendChild($liElement);
+    }
+    $headerContainer.appendChild($navNode);
+}
+
 export const responsiveMedia = (mq) => {
     let breakpoint = window.matchMedia(mq);
     console.log(breakpoint.matches, 'Coincide media query al cargar');
     if (breakpoint.matches) {
-
+        addDesktopMenu();
     } else {
         $headerContainer.appendChild(createButtonMenu());
         addListenerToButton();
     }
-
-
     breakpoint.addEventListener('change', (event) => {
         console.log(event.matches, 'EL EVENTO');
         if (event.matches) {

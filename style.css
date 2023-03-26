@@ -1,10 +1,10 @@
 html, body {
     box-sizing: border-box;
     font-size: 62.5%;
-    margin: 0;
-    padding: 0;
 }
 *, *:before, *:after {
+    margin: 0;
+    padding: 0;
     box-sizing: inherit;
 }
 body {
@@ -56,6 +56,10 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.header__logo {
+    font-size: 20px;
+    font-weight: 800;
 }
 .header__menu-button {
     all: unset;
@@ -147,4 +151,20 @@ li {
     50%, 100% {
         transform: translateY(0) rotate(0);
     }
+}
+
+/* Navbar Desktop Menu */
+.header__menu {
+    display: flex;
+    gap: 3rem;
+}
+.header__menu-item {
+    padding: 1.1rem 0;
+    cursor: pointer;
+}
+.header__menu > .header__menu-item:not(.separator) {
+    font-weight: 500;
+}
+.header__menu > .header__menu-item:not(.separator):hover {
+    color: #1ed760;
 }
