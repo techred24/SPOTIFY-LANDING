@@ -58,8 +58,8 @@ li {
     align-items: center;
 }
 .header__logo {
-    font-size: 20px;
-    font-weight: 800;
+    /* font-size: 20px;
+    font-weight: 800; */
     display: flex;
 }
 .my-svg {
@@ -166,10 +166,22 @@ li {
 .header__menu-item {
     padding: 1.1rem 0;
     cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
 }
 .header__menu > .header__menu-item:not(.separator) {
     font-weight: 500;
 }
 .header__menu > .header__menu-item:not(.separator):hover {
     color: #1ed760;
+}
+.separator {
+    cursor:none;
+}
+.my-svg {
+    width: 30%;
+}
+@media screen and (min-width: 880px) {
+    .my-svg {
+        width: 50%;
+    }
 }

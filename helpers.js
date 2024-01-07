@@ -41,6 +41,7 @@ const removeButton = () => {
 */
 const addDesktopMenu = () => {
     const $navNode = createElement(navElement);
+    $navNode.setAttribute('id', 'header__nav');
     const $ulNode = createElement(ulElement);
     const textInLiTags = ['Premium', 'Ayuda', 'Descargar', '|', 'Registrarse', 'Iniciar Sesión'];
     $navNode.appendChild($ulNode);
@@ -51,6 +52,10 @@ const addDesktopMenu = () => {
         $ulNode.appendChild($liElement);
     }
     $headerContainer.appendChild($navNode);
+}
+const removeDesktopMenu = () => {
+    const $nav = document.getElementById('header__nav');
+    if ($nav) $nav.remove();
 }
 
 export const responsiveMedia = (mq) => {
@@ -66,8 +71,10 @@ export const responsiveMedia = (mq) => {
         console.log(event.matches, 'EL EVENTO');
         if (event.matches) {
             removeButton();
+            addDesktopMenu();
             return
         }
+        removeDesktopMenu();
         $headerContainer.appendChild(createButtonMenu());
         addListenerToButton();
     });
