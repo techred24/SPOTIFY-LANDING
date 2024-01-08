@@ -21,6 +21,6 @@ export const ulElement = {
 export const liElement = {
     name: 'li',
     attributes: {
-        class: 'header__menu-item'
+        class: 'header__menu-item step-0'
     }
 }
