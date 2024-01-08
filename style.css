@@ -15,7 +15,11 @@ body {
 h1 {
     color: #000000;
 }
+.text-center {
+    text-align: center;
+}
 :root {
+    --gray: #a0c3d2;
     --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
     --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
     --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
@@ -226,4 +230,8 @@ li {
     .my-svg {
         width: 50%;
     }
+}
+.familiar-plan {
+    background-color: var(--gray);
+    font-family: Arial, Helvetica, sans-serif;
 }
