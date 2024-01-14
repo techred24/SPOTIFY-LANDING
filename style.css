@@ -240,6 +240,7 @@ li {
     background-color: var(--gray);
     font-family: Arial, Helvetica, sans-serif;
     padding: 2rem 0;
+    text-align: center;
 }
 
 .familiar-plan__title {
@@ -259,19 +260,15 @@ li {
     color: #fff;
     text-align: center;
     font-weight: bold;
-    padding: 1rem 0;
+    padding: 1rem 2.5rem;
     border-radius: 2rem;
-    width: 95%;
-    /* margin-right: auto;
-    margin-left: auto; */
-    margin: 5rem auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 @media screen and (min-width: 678px) {
     .familiar-plan__empezar {
-        display: inline-block;
         width: auto;
-        padding: 1rem 2.5rem;
-        margin-left: auto;
+        display: inline-block;
     }
 }
 .familiar-plan__terminos {
