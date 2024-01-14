@@ -61,6 +61,9 @@ h1 {
   .step-5 {
     font-size: var(--step-5);
   }
+.underline {
+    text-decoration: underline;
+}
 /* Globales */
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
@@ -102,6 +105,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: .2rem 0;
 }
 .header__logo {
     /* font-size: 20px;
@@ -211,11 +215,12 @@ li {
 }
 .header__menu-item {
     padding: 1.1rem 0;
+    /* font-weight: bold; */
     cursor: pointer;
     font-family: Arial, Helvetica, sans-serif;
 }
 .header__menu > .header__menu-item:not(.separator) {
-    font-weight: 500;
+    font-weight: bold;
 }
 .header__menu > .header__menu-item:not(.separator):hover {
     color: #1ed760;
@@ -228,10 +233,47 @@ li {
 }
 @media screen and (min-width: 880px) {
     .my-svg {
-        width: 50%;
+        width: 45%;
     }
 }
 .familiar-plan {
     background-color: var(--gray);
     font-family: Arial, Helvetica, sans-serif;
+    padding: 2rem 0;
+}
+
+.familiar-plan__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    margin-top: 4.5rem;
+}
+.familiar-plan__message {
+    font-weight: 500;
+    margin: 0;
+    margin-top: 2.5rem;
+}
+.familiar-plan__empezar {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem 0;
+    border-radius: 2rem;
+    width: 95%;
+    /* margin-right: auto;
+    margin-left: auto; */
+    margin: 5rem auto;
+}
+@media screen and (min-width: 678px) {
+    .familiar-plan__empezar {
+        display: inline-block;
+        width: auto;
+        padding: 1rem 2.5rem;
+        margin-left: auto;
+    }
+}
+.familiar-plan__terminos {
+    font-size: 1rem;
 }
