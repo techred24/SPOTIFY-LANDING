@@ -18,6 +18,9 @@ h1 {
 .text-center {
     text-align: center;
 }
+.text-break {
+    display: block;
+}
 :root {
     --gray: #a0c3d2;
     --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
@@ -236,6 +239,7 @@ li {
         width: 45%;
     }
 }
+/* Plan Familiar */
 .familiar-plan {
     background-color: var(--gray);
     font-family: Arial, Helvetica, sans-serif;
@@ -273,4 +277,58 @@ li {
 }
 .familiar-plan__terminos {
     font-size: 1rem;
+}
+
+/* Cuentas */
+.cuentas {
+    display: grid;
+    grid-gap: 3rem;
+    padding-top: 3rem;
+    /* grid-template-rows: repeat(2, 1fr); */
+}
+@media screen and (min-width: 678px) {
+    .cuentas {
+        padding-top: 13rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: unset;
+    }
+}
+.cuentas__text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+@media screen and (min-width: 678px) {
+    .cuentas__text {
+        padding: 0 4rem;
+    }
+}
+.cuentas__title {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+@media screen and (min-width: 678px) {
+    .cuentas__title {
+        font-size: 3.5rem;
+    }
+}
+@media screen and (min-width:678px) {
+    .cuentas__message {
+        font-size: 2.3rem;
+        font-weight: normal;
+    }
+}
+.cuentas__image-container {
+    display: flex;
+    justify-content: center;
+}
+@media screen and (min-width:678px) {
+    .cuentas__image-container {
+        justify-content: flex-end;
+    }
+}
+.cuentas__image {
+    max-width: 100%;
 }
