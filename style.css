@@ -242,7 +242,7 @@ li {
 /* Plan Familiar */
 .familiar-plan {
     background-color: var(--gray);
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     padding: 2rem 0;
     text-align: center;
 }
@@ -331,4 +331,16 @@ li {
 }
 .cuentas__image {
     max-width: 100%;
+}
+/* mejor precio */
+.mejor-precio {
+    background-color: var(--gray);
+    text-align: center;
+    padding: 7rem 0;
+}
+.mejor-precio__title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 2rem;
 }
