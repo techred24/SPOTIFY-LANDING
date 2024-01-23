@@ -23,6 +23,8 @@ h1 {
 }
 :root {
     --gray: #a0c3d2;
+    --pink: #b02695;
+    --yellow: #fae62d;
     --step--2: clamp(0.91rem, 0.89rem + 0.1vw, 0.96rem);
     --step--1: clamp(1.09rem, 1.05rem + 0.21vw, 1.2rem);
     --step-0: clamp(1.31rem, 1.24rem + 0.37vw, 1.5rem);
@@ -343,4 +345,43 @@ li {
     font-weight: bold;
     margin: 0;
     margin-bottom: 2rem;
+}
+/* Kids */
+.kids {
+    background-color: var(--pink);
+    padding: 5rem 0;
+    text-align: center;
+}
+.kids__grid {
+    display: grid;
+    grid-gap: 4.5rem;
+}
+.kids__image-title {
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+}
+.kids__message {
+    color: #fff;
+    /* font-size: 16px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-bottom: 8rem;
+    line-height: 1.8;
+}
+.kids__information {
+    background-color: var(--yellow);
+    color: var(--pink);
+    font-weight: bold;
+    display: block;
+    padding: 1.2rem 3rem;
+    border-radius: 2.5rem;
+    font-size: 15px;
+}
+@media screen and (min-width: 678px) {
+    .kids__information {
+        display: inline-block;
+    }
 }
