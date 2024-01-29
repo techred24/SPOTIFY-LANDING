@@ -374,8 +374,15 @@ li {
     /* font-size: 16px; */
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    margin-bottom: 8rem;
+    /* margin-bottom: 8rem; */
     line-height: 1.8;
+}
+.kids__exclusivo {
+    color: var(--yellow);
+    font-weight: bold;
+    font-size: 17px;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
 }
 .kids__information {
     background-color: var(--yellow);
