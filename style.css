@@ -356,6 +356,12 @@ li {
     display: grid;
     grid-gap: 4.5rem;
 }
+@media screen and (min-width: 678px) {
+    .kids__grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 1rem;
+    }
+}
 .kids__image-title {
     max-width: 100%;
     display: block;
@@ -384,4 +390,10 @@ li {
     .kids__information {
         display: inline-block;
     }
+}
+.kid__avatar {
+    display: block;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
