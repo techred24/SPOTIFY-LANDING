@@ -352,6 +352,11 @@ li {
     padding: 5rem 0;
     text-align: center;
 }
+@media screen and (min-width: 678px) {
+    .kids {
+        text-align: left;
+    }
+}
 .kids__grid {
     display: grid;
     grid-gap: 4.5rem;
@@ -368,6 +373,13 @@ li {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 5rem;
+}
+@media screen and (min-width: 678px) {
+    .kids__image-title {
+        width: 110px;
+        margin: unset;
+        margin-bottom: 7rem;
+    }
 }
 .kids__message {
     color: #fff;
