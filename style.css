@@ -511,14 +511,40 @@ li {
     background-color: var(--gray);
     padding: 3.5rem 0;
 }
+.parental__grid {
+    display: grid;
+    align-items: center;
+}
+@media screen and (min-width: 678px) {
+    .parental__grid {
+        grid-template-columns: 3fr 2fr;
+        gap: 1rem;
+    }
+}
 .parental__title {
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 28px;
     margin: 0;
 }
+@media screen and (min-width: 678px) {
+    .parental__text {
+        padding-left: 4rem;
+        padding-right: 6rem;
+    }
+}
+@media screen and (min-width: 678px) {
+    .parental__title {
+        font-size: 38px;
+    }
+}
 .parental__message {
     margin: .5rem 0;
+}
+@media screen and (min-width: 678px) {
+    .parental__message {
+           font-size: 25px;
+    }
 }
 .parental__container-image {
     margin-top: 4rem;
