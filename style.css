@@ -600,9 +600,10 @@ li {
 }
 .obtener-premium__item {
     display: flex;
+    margin-bottom: 1rem;
 }
 .premium-item {
-    margin-right: 2rem;
+    margin-right: 2.5rem;
 }
 .premium-number {
     background-color: #000;
@@ -621,4 +622,9 @@ li {
 }
 .premium__text > p {
     font-size: 15px;
+}
+.obtener-premium__footer {
+    padding: 0 5px;
+    font-size: 11px;
+    font-weight: bold;
 }
