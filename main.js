@@ -16,3 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
 //     $menuButton.classList.toggle('open');
 // });
 
+const $detailsTags = document.querySelectorAll('.details');
+
+$detailsTags.forEach((detailTag) => {
+    // console.log(detailTag);
+    detailTag.addEventListener('click', function (event) {
+        console.log(event.target);
+        console.log(event.target.getAttribute('open'));
+        if (event.target.getAttribute('open')) {
+            const $svgElement = event.target.querySelector('.details__svg');
+            $svgElement.classList.add('rotate-svg');
+            console.log('here');
+            // $svgElement.style.transform = 'rotate(360deg)';
+        }
+    })
+})

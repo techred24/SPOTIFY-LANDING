@@ -809,3 +809,6 @@ li {
     transform: rotate(180deg);
     vertical-align: middle;
 }
+.rotate-svg {
+    transform: rotate(360deg);
+}
