@@ -732,8 +732,8 @@ li {
 }
 @media screen and (min-width: 1200px) {
     .preguntas__item {
-        max-width: unset;
-        width: 93%;
+        max-width: 1200px;
+        width: 92%;
     }
 }
 .preguntas__content {
@@ -757,7 +757,8 @@ li {
 @media screen and (min-width: 678px) {
     .preguntas__ayuda {
         margin-top: 15px;
-        margin-bottom: 24px;
+        /* margin-bottom: 24px; */
+        margin-bottom: 72px;
         font-size: 24px;
     }
 }
