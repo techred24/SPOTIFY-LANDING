@@ -781,6 +781,9 @@ li {
 .details > summary:hover {
     background-color: #f8f8f8;
 }
+.details > summary * {
+    pointer-events: none;
+}
 .details:hover  .details__title {
     /* text-decoration: underline; */
     text-decoration-line: underline;
