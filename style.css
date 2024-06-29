@@ -781,11 +781,17 @@ li {
 .details > summary:hover {
     background-color: #f8f8f8;
 }
+.details > summary.click-background {
+    background-color: #f8f8f8;
+}
 .details > summary * {
     pointer-events: none;
 }
 .details:hover  .details__title {
     /* text-decoration: underline; */
+    text-decoration-line: underline;
+}
+.details .details__title.click-underline {
     text-decoration-line: underline;
 }
 .details__title {

@@ -21,38 +21,25 @@ const $detailsTags = document.querySelectorAll('.details');
 $detailsTags.forEach((detailTag) => {
     // console.log(detailTag);
     detailTag.addEventListener('click', function (event) {
-        console.log('PARENT TARGET');
         const $parentElement = event.target.parentElement;
-        const attributesNodeArray = [...$parentElement.attributes];
-        const attrs = attributesNodeArray.reduce((attrs, attribute) => {
-            attrs[attribute.name] = attribute.value;
-            return attrs;
-        }, {});
-        console.log('atributos:', attrs);
-        // console.log(event.target);
-        console.log(event.target.parentElement);
-        // console.log(event.target.parentElement.nodeName);
-        console.log('open:', $parentElement.getAttribute('open'));
-        // console.log(event.target.getAttribute('open'));
+        const $summaryElement = event.target;
+        const $questionElement = $summaryElement.querySelector('.details__title');
+        // const attributesNodeArray = [...$parentElement.attributes];
+        // attributesNodeArray.reduce((attrs, attribute) => {
+        //     attrs[attribute.name] = attribute.value;
+        //     return attrs;
+        // }, {});
         const $svgElement = event.target.querySelector('.details__svg');
-
-        console.log('OPEN IN ATTRS');
-        console.log('open' in attrs);
         if ($parentElement.getAttribute('open') == null) {
         // if ('open' in attrs) {
             $svgElement.classList.add('rotate-svg');
-            // console.log('here');
+            $summaryElement.classList.add('click-background');
+            $questionElement.classList.add('click-underline');
             return;
-            // $svgElement.style.transform = 'rotate(360deg)';
         }
+        console.log('removing');
         $svgElement.classList.remove('rotate-svg');
-    })
+        $summaryElement.classList.remove('click-background');
+        $questionElement.classList.remove('click-underline');
+    });
 });
-
-// const node = document.querySelector('div')
-// const attributeNodeArray = [...node.attributes];
-// const attrs = attributeNodeArray.reduce((attrs, attribute) => {
-//   attrs[attribute.name] = attribute.value;
-//   return attrs;
-// }, {});
-// console.log(attrs)
