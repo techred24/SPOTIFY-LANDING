@@ -849,6 +849,8 @@ li {
  @media screen and (min-width: 678px) {
     .footer-link-grid {
         display: flex;
+        flex-grow: 1;
+        /* width: 100%; */
     }
  }
 .list-title {
@@ -865,6 +867,9 @@ li {
 .link-list {
     list-style: none;
     padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
 }
 .link-list li > a {
     display: inline-block;
