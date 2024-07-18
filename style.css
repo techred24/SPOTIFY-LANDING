@@ -834,14 +834,26 @@ li {
     .navigator-footer {
         display: flex;
         flex-wrap: wrap;
-        flex-basis: auto;
-        flex-grow: 1;
+        width: 98%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .navigator-footer {
+        flex-wrap: nowrap;
     }
 }
 .my-svg-footer {
     fill: #fff;
     width: 89px;
     height: 28.25px;
+}
+@media screen and (min-width: 1024px) {
+    .my-svg-footer {
+        width: 132px;
+        height: 41.9px;
+    }
 }
 /* .footer-link-grid {
 
@@ -850,7 +862,13 @@ li {
     .footer-link-grid {
         display: flex;
         flex-grow: 1;
-        /* width: 100%; */
+        width: 100%;
+    }
+ }
+ @media screen and (min-width:1024px) {
+    .footer-link-grid {
+        width: 50%;
+        flex-grow: unset;
     }
  }
 .list-title {
@@ -863,6 +881,11 @@ li {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     margin: 50px 0 22px;
+}
+@media screen and (min-width: 1024px) {
+    .list-title {
+        margin: 20px 0;
+    }
 }
 .link-list {
     list-style: none;
@@ -887,12 +910,36 @@ li {
     margin: 0;
     padding: 0 15px;
 }
+@media screen and (min-width: 1024px) {
+    .footer-svg-container {
+        /* flex-basis: auto; */
+        /* flex-shrink: 8; */
+        width: 16.66666667%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .wrapper-social-icons {
+        /* unicode-bidi: isolate; */
+        margin: 0 15px 0 auto;
+    }
+}
 .social-icons {
     margin: 120px 15px 15px;
 }
+@media screen and (min-width: 1024px) {
+    .social-icons {
+        margin: 20px 0 0 0;
+    }
+}
+
 .social-icons li {
     display: inline-block;
     margin-right: 15px;
+}
+@media screen and (min-width: 1024px) {
+    .social-icons li:last-child {
+        margin-right: 0;
+    }
 }
 .social-icons a {
     width: 44px;
@@ -902,6 +949,12 @@ li {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+}
+@media screen and (min-width: 1024px) {
+    .social-icons a {
+        width: 54px;
+        height: 54px;
+    }
 }
 .icon {
     display: block;
@@ -922,4 +975,57 @@ li {
 }
 [class$='-icon']:hover {
     background-color: #1ed760;
+}
+
+/* language */
+.language {
+    margin: 0 15px;
+    display: flex;
+    justify-content: flex-end;
+}
+.language__link {
+    color: #8F8F8F;
+    font-size: 9px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem 0;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    white-space: nowrap;
+    /* font-size: 10px; */
+    text-decoration: none;
+}
+.bottom-link-styles {
+    color: #8F8F8F;
+    font-size: 9px;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem 0;
+
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.language-svg {
+    margin-right: 8px;
+}
+.bottom-links__items {
+    margin: 16px 0;
+    padding-left: 15px;
+}
+.bottom-links {
+    display: flex;
+}
+.link-item {
+    display: inline-block;
+    margin-right: 24px;
+}
+.bottom-links__year {
+    margin: 0 15px 0 auto;
+    padding: 1rem 0;
+    display: block;
 }
